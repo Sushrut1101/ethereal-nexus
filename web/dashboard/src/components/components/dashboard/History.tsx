@@ -1,6 +1,10 @@
 import React from 'react';
-import {Timeline, TimelineConnector, TimelineContent, TimelineItem, TimelineSeparator} from "@mui/lab";
 import {Button} from "@/components/ui/button";
+import Timeline from "@mui/lab/Timeline";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
 
 export default function History() {
     const timelineItemStyles = {
