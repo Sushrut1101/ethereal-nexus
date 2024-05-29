@@ -30,7 +30,7 @@ export const columns = [
     ),
     cell: ({ row }) => (
       <div className="inline-flex">
-        <div className="text-orange-500 text-base"> { row.getValue("components")?.length || 0 } </div>
+        <div className="text-orange-base text-base"> { row.getValue("components")?.length || 0 } </div>
       </div>
     ),
     enableSorting: false,

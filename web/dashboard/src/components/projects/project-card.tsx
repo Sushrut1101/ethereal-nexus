@@ -25,7 +25,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <div className="flex items-center justify-evenly gap-4">
           <div className="flex flex-col items-center">
             <p className="text-xs">Components</p>
-            <p className="text-orange-500 text-base font-bold">{components.length}</p>
+            <p className="text-orange-base text-base font-bold">{components.length}</p>
           </div>
           {
             membersLength ? (

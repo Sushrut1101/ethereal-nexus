@@ -11,9 +11,9 @@ export default function DashboardLayout({ children }: {
 
   return (
     <>
-      <div className="flex-col md:flex mt-6">
+      <div className="container flex-col md:flex mt-6">
         <Loading>
-          <div className="container flex h-16 items-center px-8">
+          <div className="flex h-16 items-center px-8">
             <LogoImage />
             <MainNav className="mx-6" />
             <div className="ml-auto flex items-center space-x-4">
@@ -21,7 +21,7 @@ export default function DashboardLayout({ children }: {
               <UserNav />
             </div>
           </div>
-          <div className="flex-1 p-8">
+          <div className="flex-1 pt-8">
             {children}
           </div>
           <Toaster />

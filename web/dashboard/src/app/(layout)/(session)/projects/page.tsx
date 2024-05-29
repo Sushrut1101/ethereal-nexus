@@ -27,7 +27,7 @@ export default async function Projects() {
 
   return (
     <ProjectsViewProvider>
-      <div className="container h-full flex-1 flex-col space-y-4 md:flex">
+      <div className="h-full flex-1 flex-col space-y-4 md:flex pl-8">
         <div className="flex items-center justify-between">
           <div className="flex items-baseline">
             <h2 className="text-4xl font-bold tracking-tight">Active Projects</h2>

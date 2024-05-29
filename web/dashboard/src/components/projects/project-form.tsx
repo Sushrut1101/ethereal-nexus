@@ -87,7 +87,7 @@ export default function ProjectsForm({project, onComplete, onCancel}: ProjectsFo
         <div className="flex items-center gap-14">
           {
             onCancel && (
-              <Button onClick={onCancel} variant="text" className="text-orange-500 font-bold text-base p-0">
+              <Button onClick={onCancel} variant="text" className="text-orange-base font-bold text-base p-0">
                 Cancel
               </Button>
             )
