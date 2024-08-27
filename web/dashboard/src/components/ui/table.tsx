@@ -1,7 +1,6 @@
 import * as React from "react"
 
 import {cn} from "@/lib/utils"
-import {boolean} from "zod";
 
 const Table = React.forwardRef<
     HTMLTableElement,

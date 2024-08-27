@@ -1,7 +1,7 @@
 import React from 'react';
 import { IconJSXProps } from '@/utils/entities/icon';
 
-export default function ProjectComponentsIcon({ width, height, fill = 'currentColor' }: IconJSXProps) {
+export default function ProjectComponentsIcon({ width, height }: IconJSXProps) {
   return (
     <svg
       width={width}

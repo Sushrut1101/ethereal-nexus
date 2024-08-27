@@ -1,7 +1,7 @@
 import { IconJSXProps } from '@/utils/entities/icon';
 import React from 'react';
 
-export default function UserNavIcon({ width, height, fill = 'currentColor' }: IconJSXProps) {
+export default function UserNavIcon({ width, height }: IconJSXProps) {
   return (
     <svg
       width={width}

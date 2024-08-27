@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { type ProjectWithComponentId} from '@/data/projects/dto';
-import ComponentsIcon from '@/components/ui/icons/ComponentsIcon';
 import { Trash } from 'lucide-react';
 import ProjectComponentsIcon from '@/components/ui/icons/ProjectComponentsIcons';
 

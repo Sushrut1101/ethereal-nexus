@@ -4,8 +4,6 @@ import { auth } from '@/auth';
 import ProjectsIcon from '@/components/ui/icons/ProjectsIcon';
 import ComponentsIcon from '@/components/ui/icons/ComponentsIcon';
 import ApiDocumentationIcon from '@/components/ui/icons/ApiDocumentationIcon';
-import LogoImage from "@/components/ui/logo-image";
-import { Users2 } from 'lucide-react';
 import UserNavIcon from '@/components/ui/icons/UserNavIcon';
 
 export async function MainNav({className = "", ...props } : React.HTMLAttributes<HTMLElement>) {
