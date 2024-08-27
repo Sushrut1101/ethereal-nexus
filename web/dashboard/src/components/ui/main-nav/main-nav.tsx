@@ -6,56 +6,54 @@ import ComponentsIcon from '@/components/ui/icons/ComponentsIcon';
 import ApiDocumentationIcon from '@/components/ui/icons/ApiDocumentationIcon';
 import LogoImage from "@/components/ui/logo-image";
 import { Users2 } from 'lucide-react';
+import UserNavIcon from '@/components/ui/icons/UserNavIcon';
 
 export async function MainNav({className = "", ...props } : React.HTMLAttributes<HTMLElement>) {
   const session = await auth()
 
   return (
     <nav
-      className={cn("flex items-center justify-between w-full", className)}
+      className={cn('flex items-center justify-between w-full', className)}
       {...props}
     >
-      <div className="w-full flex items-center gap-10">
-        <NavLink className='flex' href="/">
-          <LogoImage/>
-        </NavLink>
+      <div className="space-y-4">
+          <NavLink className="p-2 flex" href="/projects">
 
-        <NavLink className="flex" href="/projects">
-          <div className="mr-4">
-            <ProjectsIcon width={20} height={20} />
-          </div>
-          <span>Projects</span>
-        </NavLink>
-
-        <NavLink className="flex" href="/components">
-          <div className="mr-4">
-            <ComponentsIcon width={20} height={20} />
-          </div>
-          <span>Components</span>
-        </NavLink>
-
-        {session?.user?.role === 'admin' && (
-          <NavLink className='flex'
-                   href="/users">
-            <div className="mr-4">
-              <Users2 width={25} height={25} />
+            <div className="mr-2">
+              <ProjectsIcon width={32} height={32} />
             </div>
-            <span>Users</span></NavLink>
-        )}
+            <span>Projects</span>
 
-        <NavLink
-          className='ml-auto flex items-center justify-center w-44'
-          rel="noreferrer noopener"
-          target="_blank"
-          href="https://diconium.github.io/ethereal-nexus/"
-        >
-          <div className="mr-4">
-            <ApiDocumentationIcon width={20} height={20} />
-          </div>
-          <span>Docs</span>
-        </NavLink>
+          </NavLink>
 
-      </div>
+          <NavLink className="p-2 flex" href="/components">
+            <div className="mr-2">
+              <ComponentsIcon width={32} height={32} />
+            </div>
+            <span>Components</span>
+          </NavLink>
+
+          <NavLink
+            className="p-2 flex"
+            rel="noreferrer noopener"
+            target="_blank"
+            href="https://diconium.github.io/ethereal-nexus/"
+          >
+            <div className="mr-2">
+              <ApiDocumentationIcon width={32} height={32} />
+            </div>
+            <span>Documents</span>
+          </NavLink>
+
+          {session?.user?.role === 'admin' && (
+            <NavLink className="p-2 flex" href="/users">
+              <div className="mr-2">
+                <UserNavIcon width={32} height={32} />
+              </div>
+              <span>Users</span>
+            </NavLink>
+          )}
+        </div>
     </nav>
   );
 }

@@ -62,9 +62,9 @@ export default function ProjectsForm({project, onComplete, onCancel}: ProjectsFo
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="transition-colors text-muted-foreground font-bold">Name</FormLabel>
+              <FormLabel className="transition-colors dark:text-muted-foreground">Name</FormLabel>
               <FormControl>
-                <Input placeholder="Name" {...field} className="bg-white dark:bg-transparent font-bold" />
+                <Input placeholder="Write a new name..." {...field} className="border border-background dark:border-white bg-white dark:bg-transparent" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -75,9 +75,9 @@ export default function ProjectsForm({project, onComplete, onCancel}: ProjectsFo
           name="description"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="transition-colors text-muted-foreground font-bold">Description</FormLabel>
+              <FormLabel className="transition-colors dark:text-muted-foreground">Description</FormLabel>
               <FormControl>
-                <TextArea placeholder="Description" {...field} rows={5} className="bg-white dark:bg-transparent" />
+                <TextArea placeholder="Write a new description..." {...field} rows={5} className="border border-background dark:border-white bg-white dark:bg-transparent" />
               </FormControl>
               <FormMessage />
             </FormItem>

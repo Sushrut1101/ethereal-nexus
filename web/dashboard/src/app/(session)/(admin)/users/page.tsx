@@ -11,15 +11,15 @@ export default async function Teams() {
   const users = await getUsers()
 
   return (
-    <div className="container h-full flex-1 flex-col space-y-8 p-8 md:flex">
+    <div className="h-full flex-1 flex-col space-y-8 p-8 md:flex">
       {
         users.success ?
           <DataTable
             entity={'users'}
             createSlot={
-              <div className="w-full flex justify-between items-end">
-                <div>
-                  <h2 className="text-2xl font-bold tracking-tight">Users</h2>
+              <div className="w-full flex justify-between">
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold">Users</h2>
                   <p className="text-muted-foreground">Manage your users here</p>
                 </div>
                 <Link

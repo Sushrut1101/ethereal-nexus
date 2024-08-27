@@ -32,7 +32,7 @@ export const columns = [
     id: "version",
     accessorFn: row => row.version,
     header: ({ column }) => (
-      <DataTableColumnHeader className="font-bold" column={column} title="Version" />
+      <DataTableColumnHeader className="font-semibold" column={column} title="Version" />
     ),
     cell: ({ row, table }) => {
       const {id, version, versions} = row.original;

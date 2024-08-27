@@ -11,7 +11,7 @@ export default function NewProjectModal() {
   const router = useRouter();
 
   return <Dialog open={true} onOpenChange={router.back}>
-    <DialogContent className="sm:max-w-[425px]">
+    <DialogContent className="sm:max-w-[425px] bg-white dark:bg-transparent">
       <DialogHeader>
         <DialogTitle>Projects</DialogTitle>
         <DialogDescription>

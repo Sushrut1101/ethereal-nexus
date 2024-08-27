@@ -25,14 +25,14 @@ export default async function Projects() {
 
   return (
     <ProjectsViewProvider>
-      <div className="container h-full flex-1 flex-col space-y-8 p-8 md:flex">
-        <div className="w-full flex items-end">
-          <div className="mr-auto">
+      <div className="h-full flex flex-col space-y-8 p-8">
+        <div className="w-full flex">
+          <div className="mr-auto space-y-4">
             <div className="flex items-baseline">
-              <h2 className="text-2xl font-bold tracking-tight">Active Projects</h2>
-              <h4 className="pl-2">({projects.success ? projects.data.length : ''})</h4>
+              <h2 className="text-4xl font-semibold">Active Projects</h2>
+              <h4 className="text-2xl pl-2 text-[#D14600]">({projects.success ? projects.data.length : ''})</h4>
             </div>
-            <p className="text-muted-foreground">Manage your projects here</p>
+            <p>Manage your projects here</p>
           </div>
           {
             projects.success && (
@@ -43,7 +43,7 @@ export default async function Projects() {
                   buttonVariants({
                     variant: 'outline',
                     size: 'sm',
-                    className: 'mr-2 transition-colors bg-orange-500 rounded-full text-white h-9 px-5 flex justify-center items-center',
+                    className: 'mr-2 transition-colors bg-[#D14600] rounded-full text-white h-9 px-5 flex justify-center items-center',
                   }),
                   session?.user?.role === 'viewer' && 'pointer-events-none opacity-50',
                 )}

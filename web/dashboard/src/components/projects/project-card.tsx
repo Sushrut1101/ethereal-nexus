@@ -2,6 +2,9 @@
 
 import React from 'react';
 import { type ProjectWithComponentId} from '@/data/projects/dto';
+import ComponentsIcon from '@/components/ui/icons/ComponentsIcon';
+import { Trash } from 'lucide-react';
+import ProjectComponentsIcon from '@/components/ui/icons/ProjectComponentsIcons';
 
 type MembersLength = {
   membersLength?: boolean,
@@ -11,33 +14,21 @@ type ProjectCardProps = {
   project: ProjectWithComponentId & MembersLength,
 }
 export function ProjectCard({ project }: ProjectCardProps) {
-  const { description, name , components, membersLength } = project;
+  const { description, name , components } = project;
 
   return (
     <div
-      className="bg-accent dark:bg-transparent border border-gray-300 dark:border-opacity-40 rounded-lg w-full h-full p-4">
-      <div className="card ">
-        <div
-          className="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 h-36 lg:h-44 rounded-md"></div>
-        { description && <p className="text-xs mt-2">{description}</p> }
-        <h3 className="font-bold my-1">{name}</h3>
-        <div className="border-t border-gray-200 my-4 dark:opacity-40"></div>
-        <div className="flex items-center justify-evenly gap-4">
-          <div className="flex flex-col items-center">
-            <p className="text-xs">Components</p>
-            <p className="text-orange-500 text-base font-bold">{components.length}</p>
-          </div>
-          {
-            membersLength ? (
-              <>
-                <div className="border-r border-gray-200 h-10 dark:opacity-40"></div>
-                <div className="flex flex-col items-center">
-                  <p className="text-xs">Project Members</p>
-                  <p className="text-base font-bold">{membersLength}</p>
-                </div>
-              </>
-            ) : null
-          }
+      className="dark:bg-transparent border border-gray-300 dark:border-opacity-40 rounded-lg w-[210px] h-full p-6">
+     <div className="flex items-end justify-end">
+       <Trash className="h-4 w-4 text-red-600" />
+     </div>
+      <h3 className="my-3 font-bold text-lg">{name}</h3>
+      <div className="card">
+        {description && <p className="font-medium my-4 text-sm">{description}</p>}
+
+        <div className="inline-flex items-center">
+          <ProjectComponentsIcon width={24} height={24}></ProjectComponentsIcon>
+          <p className="font-medium text-sm ml-3">{components.length > 1 ?  `${components.length} components` : `${components.length} component`} </p>
         </div>
       </div>
     </div>

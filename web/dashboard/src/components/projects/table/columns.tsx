@@ -10,7 +10,7 @@ export const columns = [
     header: ({ column }) => (
       <DataTableColumnHeader className="font-bold" column={column} title="Name" />
     ),
-    cell: ({ row }) => <Link className="text-xl font-bold" href={`/projects/${row.original.id}`}>{row.getValue("name")}</Link>,
+    cell: ({ row }) => <Link className="font-medium" href={`/projects/${row.original.id}`}>{row.getValue("name")}</Link>,
     enableSorting: false,
     enableHiding: true,
   },
@@ -19,7 +19,7 @@ export const columns = [
     header: ({ column }) => (
       <DataTableColumnHeader className="font-bold" column={column} title="Description" />
     ),
-    cell: ({ row }) => <Link className="font-normal text-base leading-4" href={`/projects/${row.original.id}`}>{row.getValue("description")}</Link>,
+    cell: ({ row }) => <Link className="text-[#595959] text-base leading-4" href={`/projects/${row.original.id}`}>{row.getValue("description")}</Link>,
     enableSorting: false,
     enableHiding: true,
   },
@@ -30,7 +30,7 @@ export const columns = [
     ),
     cell: ({ row }) => (
       <div className="inline-flex">
-        <div className="text-orange-500 text-base"> { row.getValue("components")?.length || 0 } </div>
+        <div className="text-base text-[#595959]"> { row.getValue("components")?.length || 0 } </div>
       </div>
     ),
     enableSorting: false,

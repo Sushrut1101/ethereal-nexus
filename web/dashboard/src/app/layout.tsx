@@ -14,7 +14,7 @@ export default async function RootLayout({
     <head>
         <NewRelicSnippet/>
     </head>): null}
-    <body className="font-campton">
+    <body className="font-poppins">
     {children}
     </body>
     </html>;

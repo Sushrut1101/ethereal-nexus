@@ -25,10 +25,10 @@ export function UpdateProjectsView({ projects}) {
             projects.error.message
 
         ) :
-        <div className="grid grid-cols-3 gap-5">
+        <div className="inline-flex">
           {projects.success ? (
             projects.data.map((project) => (
-              <Link key={project.id} href={`/projects/${project.id}`}>
+              <Link className="pr-6" key={project.id} href={`/projects/${project.id}`}>
                 <ProjectCard project={project} />
               </Link>
             ))

@@ -20,10 +20,10 @@ export default async function EditProject({ params: { id }, searchParams: { tab 
   }
 
   return (
-    <div className="container h-full flex-1 flex-col space-y-8 p-8 md:flex">
+    <div className="h-full flex-1 flex-col space-y-8 p-8 md:flex">
       <div className="flex items-center justify-between space-y-2">
         <div>
-          <h2 className="text-2xl font-bold tracking-tight">{project.data.name}</h2>
+          <h2 className="text-2xl font-bold">{project.data.name}</h2>
           <p className="text-muted-foreground">{project.data.description}</p>
         </div>
       </div>
