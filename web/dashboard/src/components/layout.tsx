@@ -12,7 +12,7 @@ export default function DashboardLayout({ children }: {
 
   return (
     <>
-      <div className="flex flex-col md:flex mt-2">
+      <div className="container flex flex-col md:flex mt-2">
         <Loading>
           <div className="flex h-16 items-center px-8 border-b">
             <NavLink className="flex" href="/">
@@ -30,7 +30,7 @@ export default function DashboardLayout({ children }: {
               <MainNav />
             </aside>
 
-            <main className="flex-1 p-8">
+            <main className="flex-1 pt-8">
               {children}
             </main>
           </div>

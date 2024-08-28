@@ -25,7 +25,18 @@ module.exports = {
       'xl': '1280px',
     },
     extend: {
+      margin: {
+        'n55': '-0.55rem', // Custom negative margin used on react timeline
+      },
       colors: {
+        orange: {
+          base: '#D14600',
+        },
+        grey: {
+          base: '#D1D1D1',
+          light:'#575758',
+        },
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

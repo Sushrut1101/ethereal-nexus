@@ -1,47 +1,43 @@
-import { buttonVariants } from '@/components/ui/button';
+import {Button} from '@/components/ui/button';
 import Link from 'next/link';
 import { auth } from '@/auth';
-import Image from 'next/image';
-import { cn } from '@/lib/utils';
 import React from 'react';
+import ProjectsIcon from "@/components/ui/icons/ProjectsIcon";
+import {UsersIcon} from "lucide-react";
+import ComponentsIcon from "@/components/ui/icons/ComponentsIcon";
+import {getProjects} from "@/data/projects/actions";
+import {getComponents} from "@/data/components/actions";
+import {getUsers} from "@/data/users/actions";
+
+import {
+    Timeline,
+    TimelineConnector,
+    TimelineContent,
+    TimelineItem,
+    TimelineSeparator
+} from "@mui/lab";
+import DashboardCards from "@/components/components/dashboard/DashboardCards";
+import LatestComponentReleases from "@/components/components/dashboard/LatestComponentReleases";
+import LatestUsers from "@/components/components/dashboard/LatestUsers";
+import History from "@/components/components/dashboard/History";
+
 
 export default async function Home() {
   const session = await auth();
+    const projects = await getProjects(session?.user?.id);
+    const components = await getComponents();
+    const users = await getUsers();
 
-  return (
-    <div className="container">
-      <article className="grid md:grid-cols-hero items-center">
-        <div>
-          <h2 className="text-5xl uppercase">
-            Seamless Integration <b>Limitless Possibilities</b>
-          </h2>
-          <p className="text-2xl mt-5">
-            Experience excellence with the use of our components that integrate effortlessly with your
-            preferred CMS system, faster than you can blink.
-          </p>
-          <Link
-            href="/projects/new"
-            passHref
-            className={cn(
-              buttonVariants({
-                variant: 'link',
-                size: 'sm',
-                className: 'text-orange-500 p-0 py-2 mt-10',
-              }),
-              session?.user?.role === 'viewer' && 'pointer-events-none opacity-50',
-            )}
-          >
-            <span className="text-base font-bold"> Start a new project now</span>
-          </Link>
+    return (
+        <div className="container">
+            <DashboardCards components={components} projects={projects} users={users}></DashboardCards>
+            <div className="grid grid-cols-3 h-full mt-4 gap-4">
+                <div>
+                    <LatestComponentReleases></LatestComponentReleases>
+                    <LatestUsers></LatestUsers>
+                </div>
+                <History></History>
+            </div>
         </div>
-        <Image
-          src="/hero-image.png"
-          alt="Dashboard hero image"
-          data-testid="dashboard-image"
-          width={750}
-          height={0}
-        />
-      </article>
-    </div>
-  );
+    );
 }
