@@ -30,7 +30,7 @@ export default async function Projects() {
           <div className="mr-auto space-y-4">
             <div className="flex items-baseline">
               <h2 className="text-4xl font-semibold">Active Projects</h2>
-              <h4 className="text-2xl pl-2 text-[#D14600]">({projects.success ? projects.data.length : ''})</h4>
+              <h4 className="text-2xl pl-2 text-[#D14600]">{projects.success ? `(${projects.data.length})`: ''}</h4>
             </div>
             <p>Manage your projects here</p>
           </div>

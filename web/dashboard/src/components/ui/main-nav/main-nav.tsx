@@ -16,7 +16,6 @@ export async function MainNav({className = "", ...props } : React.HTMLAttributes
     >
       <div className="space-y-4">
           <NavLink className="p-2 flex" href="/projects">
-
             <div className="mr-2">
               <ProjectsIcon width={32} height={32} />
             </div>

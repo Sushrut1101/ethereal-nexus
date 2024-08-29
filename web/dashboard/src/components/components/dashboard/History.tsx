@@ -14,8 +14,8 @@ export default function History() {
     };
 
     return (
-        <div className="col-span-2">
-            <div className="relative bg-white p-4 shadow h-full rounded-lg">
+        <div className="border rounded-lg col-span-2">
+            <div className="relative p-4 h-full ">
                 <span className="font-bold ml-4">History</span>
                 <div className="mt-3">
                     <Timeline position="right">
