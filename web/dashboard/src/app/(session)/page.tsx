@@ -17,7 +17,7 @@ export default async function Home() {
   const users = await getUsers();
 
   return (
-    <div className="container">
+    <div className="space-y-8 p-8">
       <h2 className="text-4xl font-semibold">Hi, {userName}</h2>
       <div className="mt-12 inline-flex">
         <DashboardCards components={components} projects={projects} users={users}></DashboardCards>

@@ -9,6 +9,7 @@ import ComponentsIcon from '@/components/ui/icons/ComponentsIcon';
 import ApiDocumentationIcon from '@/components/ui/icons/ApiDocumentationIcon';
 import UserNavIcon from '@/components/ui/icons/UserNavIcon';
 import MenuExpandIcon from '@/components/ui/icons/MenuExpandIcon';
+import MenuCloseExpandIcon from '@/components/ui/icons/MenuCloseExpandIcon';
 
 export function LateralMenu({className = "", ...props } : React.HTMLAttributes<HTMLElement>) {
   const { data } = useSession()
@@ -31,7 +32,8 @@ export function LateralMenu({className = "", ...props } : React.HTMLAttributes<H
             handle();
           }}
         >
-          <MenuExpandIcon width="24" height="24"></MenuExpandIcon>
+          {!open &&<MenuExpandIcon width="24" height="24"></MenuExpandIcon>}
+          {open &&<MenuCloseExpandIcon width="24" height="24"></MenuCloseExpandIcon>}
         </div>
         <div className="space-y-4 w-fit">
 
