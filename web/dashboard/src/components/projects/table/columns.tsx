@@ -8,16 +8,16 @@ export const columns = [
   {
     accessorKey: "name",
     header: ({ column }) => (
-      <DataTableColumnHeader className="font-bold" column={column} title="Name" />
+      <DataTableColumnHeader className="font-normal" column={column} title="Name" />
     ),
-    cell: ({ row }) => <Link className="font-medium" href={`/projects/${row.original.id}`}>{row.getValue("name")}</Link>,
+    cell: ({ row }) => <Link className="font-semibold" href={`/projects/${row.original.id}`}>{row.getValue("name")}</Link>,
     enableSorting: false,
     enableHiding: true,
   },
   {
     accessorKey: "description",
     header: ({ column }) => (
-      <DataTableColumnHeader className="font-bold" column={column} title="Description" />
+      <DataTableColumnHeader className="font-normal" column={column} title="Description" />
     ),
     cell: ({ row }) => <Link className="text-[#595959] text-base leading-4" href={`/projects/${row.original.id}`}>{row.getValue("description")}</Link>,
     enableSorting: false,
@@ -26,7 +26,7 @@ export const columns = [
   {
     accessorKey: "components",
     header: ({ column }) => (
-      <DataTableColumnHeader className="font-bold" column={column} title="Components" />
+      <DataTableColumnHeader className="font-normal" column={column} title="Components" />
     ),
     cell: ({ row }) => (
       <div className="inline-flex">

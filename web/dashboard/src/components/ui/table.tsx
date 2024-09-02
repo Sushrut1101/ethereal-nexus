@@ -6,7 +6,7 @@ const Table = React.forwardRef<
     HTMLTableElement,
     React.HTMLAttributes<HTMLTableElement>
 >(({className, ...props}, ref) => (
-  <div className={`w-full overflow-auto border-[0.7px] rounded-[12px] transition-colors`}>
+  <div className={`w-full overflow-auto transition-colors`}>
     <table
       ref={ref}
       className={cn('w-full caption-bottom text-base', className)}
@@ -20,7 +20,7 @@ const TableHeader = React.forwardRef<
     HTMLTableSectionElement,
     React.HTMLAttributes<HTMLTableSectionElement>
 >(({className, ...props}, ref) => (
-    <thead ref={ref} className={cn('bg-accent', className)} {...props} />
+    <thead ref={ref} className={className} {...props} />
 ))
 TableHeader.displayName = "TableHeader"
 
@@ -30,7 +30,7 @@ const TableBody = React.forwardRef<
 >(({className, ...props}, ref) => (
     <tbody
         ref={ref}
-        className={cn("dark:bg-transparent", className)}
+        className={cn("dark:bg-transparent border", className)}
         {...props}
     />
 ))
@@ -55,7 +55,7 @@ const TableRow = React.forwardRef<
     <tr
         ref={ref}
         className={cn(
-            "h-[60px] transition-colors border",
+            "h-[60px] transition-colors",
             className
         )}
         {...props}

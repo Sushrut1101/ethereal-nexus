@@ -1,14 +1,13 @@
 import React from "react";
 import { getProjects } from '@/data/projects/actions';
 import { auth } from '@/auth';
-import { buttonVariants } from '@/components/ui/button';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { ToogleIconViewProjects } from '@/components/ui/toogle-icon-view-projects';
 import { UpdateProjectsView } from '@/components/ui/update-projects-view';
 import { ProjectsViewProvider } from '@/components/components/projects/ProjectsViewProvider';
 import { getMembersByResourceId } from '@/data/member/actions';
-import { Plus } from 'lucide-react';
+import NewProjectIcon from '@/components/ui/icons/NewProjectIcon';
 
 export default async function Projects() {
   const session = await auth()
@@ -40,16 +39,11 @@ export default async function Projects() {
                 href="/projects/new"
                 passHref
                 className={cn(
-                  buttonVariants({
-                    variant: 'outline',
-                    size: 'sm',
-                    className: 'mr-2 transition-colors bg-[#D14600] rounded-full text-white h-9 px-5 flex justify-center items-center',
-                  }),
+                  'mr-2',
                   session?.user?.role === 'viewer' && 'pointer-events-none opacity-50',
                 )}
               >
-                <Plus />
-                <span className="text-sm font-bold">New project</span>
+                <NewProjectIcon width="40" height="40"></NewProjectIcon>
               </Link>
             )
           }

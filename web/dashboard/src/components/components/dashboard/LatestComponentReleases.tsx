@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function LatestComponentReleases() {
     return (
-        <div className="relative h-full p-4 w-[414px]">
+        <div className="relative h-full p-4">
             <span className="font-bold">Latest component releases</span>
             <div className="mt-2">
                 <div className="grid grid-cols-6 gap-4">
