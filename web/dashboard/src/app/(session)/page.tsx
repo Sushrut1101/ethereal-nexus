@@ -6,7 +6,6 @@ import {getUsers} from "@/data/users/actions";
 
 import DashboardCards from "@/components/components/dashboard/DashboardCards";
 import LatestComponentReleases from '@/components/components/dashboard/LatestComponentReleases';
-import LatestUsers from '@/components/components/dashboard/LatestUsers';
 import History from '@/components/components/dashboard/History';
 
 export default async function Home() {
@@ -25,7 +24,6 @@ export default async function Home() {
       <div className="grid grid-cols-3 h-full mt-4 gap-4">
         <div className="border rounded-lg">
           <LatestComponentReleases></LatestComponentReleases>
-          <LatestUsers></LatestUsers>
         </div>
         <History></History>
       </div>

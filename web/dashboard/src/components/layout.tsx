@@ -4,7 +4,7 @@ import { UserNav } from '@/components/user/user-nav';
 import { Loading } from '@/components/ui/loading';
 import { NavLink } from '@/components/ui/main-nav/nav-link';
 import LogoImage from '@/components/ui/logo-image';
-import { LateralMenu } from '@/components/ui/main-nav/menu';
+import { LateralMenu } from '@/components/ui/main-nav/lateralMenu';
 import { SessionProvider } from 'next-auth/react';
 
 export default function DashboardLayout({ children }: {

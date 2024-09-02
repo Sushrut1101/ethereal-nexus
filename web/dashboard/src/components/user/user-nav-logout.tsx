@@ -1,10 +1,11 @@
 'use client'
 
+import { DropdownMenuItem } from '@/components/ui/dropdown-menu';
 import { signOutAction } from '@/auth/actions/signOutAction';
 
 export function UserNavLogout() {
-  return <div className="justify-end" onClick={async () => {
+  return <DropdownMenuItem onClick={async () => {
     await signOutAction()
   }}>Log out
-  </div>
+  </DropdownMenuItem>
 }
